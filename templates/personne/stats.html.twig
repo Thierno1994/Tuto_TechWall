@@ -1,0 +1,35 @@
+{% extends "template.html.twig" %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+{% block pageTitle %}{% endblock %}
+
+<div class="row">
+    <div class="col-md-6 mb-3">
+      <div class="card bg-primary text-white h-100">
+        <div class="card-body py-5">Moyenne d'age des personnes entre {{ ageMin }} et {{ ageMax }} ans </div>
+        <div class="card-footer d-flex">
+          {{ stats['ageMoyen'] }}
+          <span class="ms-auto">
+            <i class="bi bi-chevron-right"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <div class="card bg-warning text-dark h-100">
+        <div class="card-body py-5">Nombre de personne d'age entre {{ ageMin }} et {{ ageMax }} ans </div>
+        <div class="card-footer d-flex">
+          {{ stats['nombrePersonne'] }}
+          <span class="ms-auto">
+            <i class="bi bi-chevron-right"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

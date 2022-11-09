@@ -1,0 +1,17 @@
+{% extends "template.html.twig" %}
+
+{% block title %}Ajout Personne{% endblock %}
+
+{% block body %}
+
+{% block pageTitle %}<h1 class="mt-4">Ajout d'une Personne</h1><br>{% endblock %}
+
+    {# où form représente la méthode #}
+    {{ form_start(form_formulaire) }}
+    <div class="row">
+        <div class="col">{{ form_row(form_formulaire.firstname) }}</div>
+        <div class="col">{{ form_row(form_formulaire.name) }}</div>
+    </div>
+    {{ form_rest(form_formulaire) }}
+
+{% endblock %}
